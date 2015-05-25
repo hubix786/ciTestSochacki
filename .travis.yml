@@ -2,3 +2,13 @@ language: node_js
 before_install: npm install ­g mocha
 node_js:
 - '0.10'
+deploy:
+  provider: s3
+  access_key_id: AKIAJCBMIOJWN3WPN2ZA
+  secret_access_key:
+    secure: d8TZOh1/Y5Dp680TVbdYuKE/rba0jmfZo5ciHjryjojrnd/hBaPi50luCJn5d39xEt+zsKIE4ULu2o0Z7CxIfLkMLF0fKh9JX6UM3Fi8Fv2okJuXDJ84TTcQpOyr/srNgzXWQhPTeWwfAGdkdpEm3+TUoLRsY6PFl1KH/U4zA5eFEwEb4iVBvlNgM7lepHzBEfD9XG4mSNQZ1zSxOnauY4tfdkvI1m1lJXOtJlywfgz6Rf8fdeBp0LodTkGHQ9pCEjnw+9oHY5A4yacXcoTEXlchHZklqahRR2kFnPRYFks0Nid+81V68m+/aMAPqxbWkqkJyg1NZptBEo3cCIU+DNUkeSdmoVH5hUYmErCjGRs99BC3vi5rPjmvShy5ndex7tytu1lc55z6V9ef00/4tS5GMMSlfHKEPDzb52Nargqp9H1kPX0jX3lyDaCCek+dqKFFaCSIxeyRSFf3tdGifpCFLfVTHojVC4lCJTS2hbabl0uhW+xqASSUzaanUm6Rl6NNp9DqFyqLxsAtXSrhFE6MnbGt/NS/d2qq6K4bQwuGNXouvMqrCQGOeoUpfMf17qvIbonuyvKVTFfKmSr7YPDwuGp3/59ZP1MI63+jyWelFS+k2xVLwpNn5BD55kMv1ZJvAdeaCApjEQT7pTFC3ihIEstv8ZXpdK0R5lYibHc=
+  bucket: deploy-weeia
+  upload-dir: Sochacki
+  acl: private
+  on:
+    repo: hubix786/ciTestSochacki
